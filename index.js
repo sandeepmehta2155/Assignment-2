@@ -1,3 +1,4 @@
+'use strict'
 const l = console.log;
 
 // -------------------------------------------------------------------------------------------------
@@ -126,16 +127,16 @@ const prime = (numOne = 1, numTwo = 100) => {
   l(`Prime numbers between ${numOne} and ${numTwo} are: `);
   // Traverse each number in the interval
   // with the help of for loop
-  for (i = numOne; i <= numTwo; i++) {
+  for (let i = numOne; i <= numTwo; i++) {
     // Skip 0 and 1 as they are
     // neither prime nor composite
     if (i === 1 || i === 0) continue;
 
     // flag variable to tell
     // if i is prime or not
-    flag = 1;
+    let flag = 1;
 
-    for (j = 2; j <= i / 2; ++j) {
+    for (let j = 2; j <= i / 2; ++j) {
       if (i % j == 0) {
         flag = 0;
         break;
@@ -149,5 +150,3 @@ const prime = (numOne = 1, numTwo = 100) => {
 };
 
 prime();
-
-// -------------------------------------------------------------------------------------------------
